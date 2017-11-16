@@ -10,9 +10,21 @@ function makeBox(){
 
   setTimeout(function() {
     document.getElementById("box").style.visibility ="visible";
+    document.getElementById("box").style.backgroundColor = randomColor();
     createdTime = Date.now();
   }, x);
 }
+
+
+function randomColor() {
+  var letters = '0123456789ABCDEF'.split('');
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.round(Math.random() * 15) ];
+  }
+  return color;
+}
+
 
 document.getElementById("box").onclick=function(){
   clickedTime = Date.now();
