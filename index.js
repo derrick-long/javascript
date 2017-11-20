@@ -28,9 +28,11 @@ function randomColor() {
 
 function randomShape(){
   var element =   document.getElementById("box");
-  var selector = Math.floor(Math.random() * 3);
-  if (selector < 2) {
+  var selector = Math.random();
+  if (selector < 0.5) {
     element.style.borderRadius = "50%";
+  } else {
+    element.style.borderRadius = "0";
   }
 }
 
