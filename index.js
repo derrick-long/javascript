@@ -12,6 +12,14 @@ function makeBox(){
     document.getElementById("box").style.visibility ="visible";
     document.getElementById("box").style.backgroundColor = randomColor();
     randomShape();
+
+    var top = Math.random();
+    top = top * 400;
+    var left = Math.random();
+    left = left * 400;
+
+    document.getElementById("box").style.top = top + "px";
+    document.getElementById("box").style.left = left + "px";
     createdTime = Date.now();
   }, x);
 }
@@ -35,6 +43,8 @@ function randomShape(){
     element.style.borderRadius = "0";
   }
 }
+
+
 
 document.getElementById("box").onclick=function(){
   clickedTime = Date.now();
