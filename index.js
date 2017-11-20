@@ -11,6 +11,7 @@ function makeBox(){
   setTimeout(function() {
     document.getElementById("box").style.visibility ="visible";
     document.getElementById("box").style.backgroundColor = randomColor();
+    randomShape();
     createdTime = Date.now();
   }, x);
 }
@@ -25,6 +26,13 @@ function randomColor() {
   return color;
 }
 
+function randomShape(){
+  var element =   document.getElementById("box");
+  var selector = Math.floor(Math.random() * 3);
+  if (selector < 2) {
+    element.style.borderRadius = "50%";
+  }
+}
 
 document.getElementById("box").onclick=function(){
   clickedTime = Date.now();
